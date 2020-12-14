@@ -8,7 +8,6 @@ class App extends React.Component {
   state = { isSignedIn: null };
 
   onAccess = (action) => {
-    console.log('action:', action);
     this.setState({ isSignedIn: action });
   }
 

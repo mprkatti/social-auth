@@ -3,7 +3,6 @@ import React from 'react'
 const Header = props => {
 
   const handleAccess = () => {
-    console.log('Clicked!!');
     props.onAccess(!props.isSignedIn);
   }
 

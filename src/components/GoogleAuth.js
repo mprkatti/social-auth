@@ -6,7 +6,7 @@ export default class GoogleAuth extends Component {
   state = { isSignedIn: null };
 
   componentDidMount() {
-    console.log('Inside cmd');
+
     window.gapi.load('client:auth2', () => {
       window.gapi.client.init({
         clientId: '708151511536-mrtn16ihas6nodbsadobqtkh75ltd4i1.apps.googleusercontent.com',

@@ -8,7 +8,6 @@ const Content = ({ isSignedIn }) => {
   };
 
   return (
-    // console.log(renderFeaturedContentConfig[`style]);
     <div className="ui container">
       <div className="ui relaxed grid">
         <div className="three column row">
