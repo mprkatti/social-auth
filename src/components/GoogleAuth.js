@@ -24,15 +24,21 @@ export default class GoogleAuth extends Component {
 
   onAuthChange = () => {
     this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+    this.props.setSignIn(this.state.isSignedIn);
   }
 
   render() {
+    if (!this.props.isSignedIn && this.auth) {
+      console.log('Signing out !');
+      this.auth.signOut();
+    }
+    if (this.auth && this.auth.isSignedIn.get()) {
+      return <></>
+    }
     if (this.props.isSignedIn && this.auth) {
       this.auth.signIn();
     }
-    if (!this.props.isSignedIn && this.auth) {
-      this.auth.signOut();
-    }
+
     return (
       <>
 

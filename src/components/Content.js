@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Content = ({ isSignedIn }) => {
+const Content = ({ isAuthenticated }) => {
 
   const renderFeaturedContentConfig = {
-    text: isSignedIn ? 'Welcome to the exclusive featured content.' : 'Please login to access the content.',
-    style: isSignedIn ? "color: 'green'" : "color: 'red'"
+    text: isAuthenticated ? 'Welcome to the exclusive featured content.' : 'Please login to access the content.',
+    style: isAuthenticated ? "color: 'green'" : "color: 'red'"
   };
 
   return (

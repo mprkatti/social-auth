@@ -5,15 +5,14 @@ import GoogleAuth from './GoogleAuth';
 
 class App extends React.Component {
 
-  state = { isSignedIn: null };
+  state = { isSignedIn: null, isAuthenticated: false };
 
-  onAccess = (action) => {
+  onAccess = action => {
     this.setState({ isSignedIn: action });
   }
 
-  setSignIn = (signin) => {
-
-    this.setState({ isSignedIn: signin });
+  setSignIn = signin => {
+    this.setState({ isAuthenticated: signin, isSignedIn: signin === false ? null : signin });
   }
 
 
@@ -21,8 +20,8 @@ class App extends React.Component {
 
     return (
       <div className="" >
-        <Header onAccess={this.onAccess} isSignedIn={this.state.isSignedIn} />
-        <Content isSignedIn={this.state.isSignedIn} />
+        <Header onAccess={this.onAccess} isAuthenticated={this.state.isAuthenticated} />
+        <Content isAuthenticated={this.state.isAuthenticated} />
         <GoogleAuth setSignIn={this.setSignIn} isSignedIn={this.state.isSignedIn} />
       </div >
     );

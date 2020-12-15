@@ -3,11 +3,12 @@ import React from 'react'
 const Header = props => {
 
   const handleAccess = () => {
-    props.onAccess(!props.isSignedIn);
+    const intentToSignIn = !props.isAuthenticated;
+    props.onAccess(intentToSignIn);
   }
 
   const getLabel = () => {
-    if (props.isSignedIn) {
+    if (props.isAuthenticated) {
       return 'Sign Out';
     } else {
       return 'Sign In with Google';
