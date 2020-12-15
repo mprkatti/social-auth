@@ -20,7 +20,7 @@ const Header = props => {
 
       <div className="ui  inverted segment">
         <div style={{ width: '100%', padding: '20px', top: '10px' }}>
-          <h1 style={{ textAlign: 'center' }}>This is your oyster</h1>
+          <h1 style={{ textAlign: 'center' }}>Welcome to the Oyster</h1>
         </div>
         <div className="ui large  pointing menu transition ">
           <div className="ui container">
